@@ -14,10 +14,7 @@ interface CheckInOutFormProps {
   type: "checkin" | "checkout";
   idFrota: string;
   idFrotaHistorico?: string;
-<<<<<<< HEAD
   condutor: string;
-=======
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
   onSubmit: (data: CheckInPayload | CheckOutPayload) => void;
   onCancel: () => void;
   disabled?: boolean;
@@ -49,11 +46,7 @@ interface FormData {
   chaveAPI: string;
 }
 
-<<<<<<< HEAD
 // Payload para API de Check-In
-=======
-// JSON de retorno para Check-In
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
 export interface CheckInPayload {
   idFrota: string;
   Condutor: string;
@@ -65,7 +58,6 @@ export interface CheckInPayload {
   FlgCheckIn: boolean;
   imagemOcorrencia: string;
   fileEnvioOcorrencia: string[];
-<<<<<<< HEAD
   desenhoAvariaHistory?: DrawPoint[][];
   chaveAPI: string;
 }
@@ -74,13 +66,6 @@ export interface CheckInPayload {
 export interface CheckOutPayload {
   idFrota: string;
   Condutor: string;
-=======
-}
-
-// JSON de retorno para Check-Out
-export interface CheckOutPayload {
-  idFrota: string;
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
   idFrotaHistorico: string;
   CombustivelChegada: number;
   KMChegada: string;
@@ -92,7 +77,6 @@ export interface CheckOutPayload {
   FlgOcorrencia: boolean;
   imagemOcorrencia: string;
   fileEnvioOcorrencia: string[];
-<<<<<<< HEAD
   desenhoAvariaHistory?: DrawPoint[][];
   chaveAPI: string;
 }
@@ -119,14 +103,6 @@ const CheckInOutForm = ({
   const [formData, setFormData] = useLocalStorage<FormData>(storageKey, {
     chaveAPI: "",
     condutor: condutor,
-=======
-}
-
-const CheckInOutForm = ({ type, idFrota, idFrotaHistorico, onSubmit, onCancel }: CheckInOutFormProps) => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState<FormData>({
-    condutor: "",
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
     motivo: "",
     km: "",
     combustivel: 50,
@@ -286,44 +262,7 @@ const CheckInOutForm = ({ type, idFrota, idFrotaHistorico, onSubmit, onCancel }:
     }
   };
 
-<<<<<<< HEAD
   // Handler para upload de comprovante (Checkout)
-=======
-  const handleSubmit = () => {
-    if (isCheckout) {
-      const checkoutPayload: CheckOutPayload = {
-        idFrota: idFrota,
-        idFrotaHistorico: idFrotaHistorico || "",
-        CombustivelChegada: formData.combustivel,
-        KMChegada: formData.km,
-        ObservacaoChegada: formData.observacoes,
-        FlgAbastecimento: formData.teveAbastecimento,
-        ValorAbastecimento: formData.valorAbastecimento,
-        fileEnvio: formData.comprovanteAbastecimento,
-        ObservacaoOcorrencia: formData.descricaoOcorrencia,
-        FlgOcorrencia: formData.temOcorrencia,
-        imagemOcorrencia: formData.desenhoAvaria,
-        fileEnvioOcorrencia: formData.fotos,
-      };
-      onSubmit(checkoutPayload);
-    } else {
-      const checkinPayload: CheckInPayload = {
-        idFrota: idFrota,
-        Condutor: formData.condutor,
-        Utilizacao: formData.motivo,
-        CombustivelSaida: formData.combustivel,
-        KmSaida: formData.km,
-        ObservacaoSaida: formData.observacoes,
-        ObservacaoCheckIn: formData.descricaoOcorrencia,
-        FlgCheckIn: formData.temOcorrencia,
-        imagemOcorrencia: formData.desenhoAvaria,
-        fileEnvioOcorrencia: formData.fotos,
-      };
-      onSubmit(checkinPayload);
-    }
-  };
-
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
   const handleComprovanteUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -460,25 +399,7 @@ const CheckInOutForm = ({ type, idFrota, idFrotaHistorico, onSubmit, onCancel }:
             </div>
 
             <div className="space-y-4">
-<<<<<<< HEAD
               {/* Campo Condutor (Read Only) */}
-=======
-              {!isCheckout && (
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
-                    Nome do Condutor
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.condutor}
-                    onChange={(e) => updateFormData("condutor", e.target.value)}
-                    placeholder="Digite o nome do condutor..."
-                    className="input-fleet"
-                  />
-                </div>
-              )}
-
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
               <div>
                 <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide text-slate-500">
                   Condutor
@@ -725,30 +646,12 @@ const CheckInOutForm = ({ type, idFrota, idFrotaHistorico, onSubmit, onCancel }:
               </h3>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
               <div className="space-y-3">
                 {/* Item de Resumo Padrão */}
                 <div className="flex justify-between items-center py-2 border-b border-slate-200 last:border-0">
                   <span className="text-sm text-slate-500">Condutor</span>
                   <span className="text-sm font-semibold text-slate-800">{formData.condutor} ✓</span>
-=======
-            <div className="card-elevated">
-              <h4 className="text-lg font-bold text-foreground mb-4 pb-2 border-b border-border">
-                DADOS DA {labelSaidaChegada.toUpperCase()}
-              </h4>
-
-              <div className="space-y-1">
-                {!isCheckout && (
-                  <div className="summary-item">
-                    <span className="summary-label">Condutor:</span>
-                    <span className="summary-value">{formData.condutor || "—"}</span>
-                  </div>
-                )}
-                <div className="summary-item">
-                  <span className="summary-label">{isCheckout ? "Observação Chegada:" : "Motivo:"}</span>
-                  <span className="summary-value">{formData.motivo || "—"}</span>
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
                 </div>
                 
                 {!isCheckout && (

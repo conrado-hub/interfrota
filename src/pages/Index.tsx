@@ -23,7 +23,6 @@ interface VehicleData {
   isAvailable: boolean;
 }
 
-<<<<<<< HEAD
 // Função para decodificar base64 (incluindo URL-safe)
 const decodeBase64 = (encoded: string): string => {
   try {
@@ -138,18 +137,6 @@ const Index = () => {
     } else {
       setOperation(null);
     }
-=======
-  // Dados de exemplo do veículo
-  const vehicleData = {
-    idFrota: "123", // ID do veículo na frota
-    idFrotaHistorico: "456", // ID do histórico atual (para checkout)
-    placa: "ABC-1234",
-    modelo: "Toyota Hilux 2.8",
-    ano: 2023,
-    cor: "Branco",
-    km: 45230,
-    combustivel: 75,
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
   };
 
   // Função para começar uma operação
@@ -184,7 +171,6 @@ const Index = () => {
     }
   };
 
-<<<<<<< HEAD
   // Função auxiliar para converter base64 para File
   const base64ToFile = (base64: string, filename: string): File | null => {
     try {
@@ -393,36 +379,6 @@ const Index = () => {
       });
       setLoading(false);
     }
-=======
-  const handleSubmit = (data: CheckInPayload | CheckOutPayload) => {
-    // Exibe o JSON no console para debug
-    console.log("=== JSON PARA API ===");
-    console.log(JSON.stringify(data, null, 2));
-    
-    if (operation === "checkin") {
-      setIsAvailable(false);
-      toast.success("Check-In realizado com sucesso!", {
-        description: `Veículo ${vehicleData.placa} registrado como em uso.`,
-      });
-      
-      // Aqui você enviaria o JSON para sua API
-      // fetch('sua-api/checkin', { method: 'POST', body: JSON.stringify(data) })
-      
-    } else {
-      setIsAvailable(true);
-      toast.success("Check-Out realizado com sucesso!", {
-        description: `Veículo ${vehicleData.placa} registrado como disponível.`,
-      });
-      
-      // Aqui você enviaria o JSON para sua API
-      // fetch('sua-api/checkout', { method: 'POST', body: JSON.stringify(data) })
-    }
-    
-    // Alert com o JSON para visualização
-    alert("JSON gerado (veja o console para formato completo):\n\n" + JSON.stringify(data, null, 2));
-    
-    setOperation(null);
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
   };
 
   // Função para buscar dados do veículo
@@ -955,12 +911,8 @@ const Index = () => {
           <CheckInOutForm
             type={operation}
             idFrota={vehicleData.idFrota}
-<<<<<<< HEAD
             idFrotaHistorico={vehicleData.idFrotaHistorico || undefined}
             condutor={validationResult.Usuario}
-=======
-            idFrotaHistorico={vehicleData.idFrotaHistorico}
->>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
             onSubmit={handleSubmit}
             onCancel={handleCancel}
             disabled={isSubmitting}
