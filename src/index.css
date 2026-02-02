@@ -1,0 +1,538 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+<<<<<<< HEAD
+    /* Clean Modern Palette */
+    --background: 0 0% 98%;
+    --foreground: 220 13% 18%;
+=======
+    /* Modern Clean Palette - Visible Changes */
+    --background: 220 25% 95%;
+    --foreground: 222 47% 11%;
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    /* Primary - Vibrant Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+
+<<<<<<< HEAD
+    /* Secondary - Light Gray with subtle blue */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 30%;
+
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent - Vibrant Blue */
+    --accent: 220 70% 50%;
+=======
+    /* Secondary - Light with visible contrast */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 20%;
+
+    --muted: 210 40% 90%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent */
+    --accent: 221 83% 53%;
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+<<<<<<< HEAD
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 220 70% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Fleet Colors - Keep fuel colors */
+    --fleet-available: 152 69% 40%;
+    --fleet-available-light: 152 69% 96%;
+    --fleet-in-use: 24 95% 50%;
+    --fleet-in-use-light: 24 95% 96%;
+    --fleet-fuel-empty: 0 84% 60%;
+    --fleet-fuel-mid: 45 93% 47%;
+    --fleet-fuel-full: 142 76% 36%;
+    --fleet-header: 220 70% 45%;
+
+    /* Shadows - Softer */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 18% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(220 13% 18% / 0.08);
+    --shadow-lg: 0 12px 24px -4px hsl(220 13% 18% / 0.1);
+    --shadow-xl: 0 24px 48px -8px hsl(220 13% 18% / 0.12);
+=======
+    --border: 214 32% 80%;
+    --input: 214 32% 85%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    /* Fleet Status Colors */
+    --fleet-available: 142 71% 45%;
+    --fleet-available-light: 142 76% 92%;
+    --fleet-in-use: 25 95% 53%;
+    --fleet-in-use-light: 25 100% 92%;
+    
+    /* Fuel Gauge Colors - Red to Green */
+    --fleet-fuel-empty: 0 84% 60%;
+    --fleet-fuel-mid: 45 93% 47%;
+    --fleet-fuel-full: 142 76% 36%;
+    
+    --fleet-header: 221 83% 48%;
+
+    /* Shadows - More prominent */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  .dark {
+    --background: 220 13% 10%;
+    --foreground: 220 14% 96%;
+
+<<<<<<< HEAD
+    --card: 220 13% 14%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 220 13% 14%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 220 70% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 20%;
+    --secondary-foreground: 220 14% 90%;
+
+    --muted: 220 13% 18%;
+    --muted-foreground: 220 9% 55%;
+
+    --accent: 220 70% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 22%;
+    --input: 220 13% 22%;
+    --ring: 220 70% 55%;
+=======
+    --card: 222 47% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 90%;
+
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 22%;
+    --input: 217 33% 22%;
+    --ring: 217 91% 60%;
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* Fleet Status Badges */
+  .status-available {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold tracking-wide;
+    background-color: hsl(var(--fleet-available-light));
+    color: hsl(var(--fleet-available));
+<<<<<<< HEAD
+    border: 1px solid hsl(var(--fleet-available) / 0.3);
+=======
+    border: 2px solid hsl(var(--fleet-available) / 0.4);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  .status-in-use {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold tracking-wide;
+    background-color: hsl(var(--fleet-in-use-light));
+    color: hsl(var(--fleet-in-use));
+<<<<<<< HEAD
+    border: 1px solid hsl(var(--fleet-in-use) / 0.3);
+  }
+
+  /* Fleet Header - Clean gradient */
+  .fleet-header {
+    background: hsl(var(--primary));
+    @apply text-white;
+=======
+    border: 2px solid hsl(var(--fleet-in-use) / 0.4);
+  }
+
+  /* Fleet Header - Bold gradient */
+  .fleet-header {
+    background: linear-gradient(135deg, hsl(221 83% 40%) 0%, hsl(221 83% 55%) 100%);
+    @apply text-white shadow-lg;
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Stepper */
+  .stepper-item {
+    @apply flex flex-col items-center relative;
+  }
+
+  .stepper-circle {
+    @apply w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 shadow-md;
+  }
+
+  .stepper-circle-active {
+    @apply bg-primary text-primary-foreground;
+<<<<<<< HEAD
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.2);
+=======
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.25), 0 4px 12px hsl(var(--primary) / 0.3);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  .stepper-circle-completed {
+    background-color: hsl(var(--fleet-available));
+<<<<<<< HEAD
+    @apply text-white;
+  }
+
+  .stepper-circle-pending {
+    @apply bg-muted text-muted-foreground border-2 border-border;
+  }
+
+  /* Fuel Gauge - Keep colors */
+  .fuel-segment {
+    @apply h-12 flex-1 cursor-pointer transition-all duration-200 hover:opacity-90;
+    border: 1px solid hsla(0, 0%, 25%, 0.3);
+=======
+    @apply text-white shadow-md;
+  }
+
+  .stepper-circle-pending {
+    @apply bg-white text-muted-foreground border-2 border-border shadow-sm;
+  }
+
+  /* Fuel Gauge - Keep original red to green colors */
+  .fuel-segment {
+    @apply h-14 flex-1 cursor-pointer transition-all duration-200 shadow-sm;
+    border: 2px solid hsl(0 0% 100% / 0.3);
+  }
+
+  .fuel-segment:hover {
+    transform: scaleY(1.08);
+    filter: brightness(1.1);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  .fuel-segment:first-child {
+    @apply rounded-l-xl;
+  }
+
+  .fuel-segment:last-child {
+    @apply rounded-r-xl;
+  }
+
+  .fuel-segment-empty {
+    background: linear-gradient(180deg, hsl(0 84% 60%) 0%, hsl(0 84% 50%) 100%);
+  }
+
+  .fuel-segment-low {
+    background: linear-gradient(180deg, hsl(25 95% 53%) 0%, hsl(25 95% 45%) 100%);
+  }
+
+  .fuel-segment-mid {
+    background: linear-gradient(180deg, hsl(45 93% 50%) 0%, hsl(45 93% 42%) 100%);
+  }
+
+  .fuel-segment-high {
+    background: linear-gradient(180deg, hsl(100 60% 45%) 0%, hsl(100 60% 38%) 100%);
+  }
+
+  .fuel-segment-full {
+    background: linear-gradient(180deg, hsl(142 76% 40%) 0%, hsl(142 76% 32%) 100%);
+  }
+
+  .fuel-segment-inactive {
+<<<<<<< HEAD
+    @apply bg-muted border border-border/50;
+  }
+
+  /* Photo Upload Area - Clean style */
+  .photo-upload-zone {
+    @apply border-2 border-dashed border-muted-foreground/30 rounded-xl p-8 text-center cursor-pointer transition-all duration-300 bg-muted/30;
+  }
+
+  .photo-upload-zone:hover {
+    @apply border-primary/50 bg-primary/5;
+  }
+
+  /* Card Elevated - Cleaner shadow */
+  .card-elevated {
+    @apply bg-card rounded-2xl p-6 border border-border;
+    box-shadow: var(--shadow-md);
+=======
+    @apply bg-white border-2 border-border;
+  }
+
+  /* Photo Upload Area - More visible */
+  .photo-upload-zone {
+    @apply border-2 border-dashed border-primary/50 rounded-2xl p-8 text-center cursor-pointer transition-all duration-300 bg-white shadow-sm;
+  }
+
+  .photo-upload-zone:hover {
+    @apply border-primary bg-primary/5 shadow-md;
+    transform: translateY(-2px);
+  }
+
+  /* Card Elevated - White with strong shadow */
+  .card-elevated {
+    @apply bg-white rounded-2xl p-6 border border-border;
+    box-shadow: var(--shadow-lg);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Fleet Button Primary */
+  .btn-fleet-primary {
+<<<<<<< HEAD
+    @apply px-6 py-3 rounded-xl font-semibold text-white transition-all duration-200 bg-primary hover:bg-primary/90;
+  }
+
+  .btn-fleet-primary:hover {
+    box-shadow: var(--shadow-md);
+=======
+    @apply px-6 py-3 rounded-xl font-bold text-white transition-all duration-200 bg-primary shadow-md;
+  }
+
+  .btn-fleet-primary:hover {
+    @apply bg-primary/90;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Fleet Button Secondary */
+  .btn-fleet-secondary {
+<<<<<<< HEAD
+    @apply px-6 py-3 rounded-xl font-semibold bg-muted text-foreground transition-all duration-200 hover:bg-muted/70 border border-border;
+=======
+    @apply px-6 py-3 rounded-xl font-bold bg-white text-foreground transition-all duration-200 border-2 border-border shadow-sm;
+  }
+
+  .btn-fleet-secondary:hover {
+    @apply bg-secondary;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Fleet Button Check-in (Green) */
+  .btn-checkin {
+<<<<<<< HEAD
+    @apply px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-200;
+    background-color: hsl(var(--fleet-available));
+  }
+
+  .btn-checkin:hover {
+    filter: brightness(1.05);
+    box-shadow: var(--shadow-lg);
+=======
+    @apply px-10 py-5 rounded-2xl font-bold text-white text-lg transition-all duration-200 shadow-lg;
+    background: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 71% 35%) 100%);
+  }
+
+  .btn-checkin:hover {
+    box-shadow: 0 10px 30px -5px hsl(142 71% 45% / 0.5);
+    transform: translateY(-3px);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Fleet Button Check-out (Orange) */
+  .btn-checkout {
+<<<<<<< HEAD
+    @apply px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-200;
+    background-color: hsl(var(--fleet-in-use));
+  }
+
+  .btn-checkout:hover {
+    filter: brightness(1.05);
+    box-shadow: var(--shadow-lg);
+=======
+    @apply px-10 py-5 rounded-2xl font-bold text-white text-lg transition-all duration-200 shadow-lg;
+    background: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(25 95% 43%) 100%);
+  }
+
+  .btn-checkout:hover {
+    box-shadow: 0 10px 30px -5px hsl(25 95% 53% / 0.5);
+    transform: translateY(-3px);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Input Fleet - White background */
+  .input-fleet {
+<<<<<<< HEAD
+    @apply w-full px-4 py-3 rounded-xl border border-border bg-card text-foreground transition-all duration-200;
+  }
+
+  .input-fleet:focus {
+    @apply outline-none ring-2 ring-primary/30 border-primary;
+=======
+    @apply w-full px-4 py-3.5 rounded-xl border-2 border-border bg-white text-foreground transition-all duration-200 placeholder:text-muted-foreground shadow-sm;
+  }
+
+  .input-fleet:focus {
+    @apply outline-none border-primary shadow-md;
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Textarea Fleet */
+  .textarea-fleet {
+<<<<<<< HEAD
+    @apply w-full px-4 py-3 rounded-xl border border-border bg-card text-foreground transition-all duration-200 resize-none;
+  }
+
+  .textarea-fleet:focus {
+    @apply outline-none ring-2 ring-primary/30 border-primary;
+=======
+    @apply w-full px-4 py-3.5 rounded-xl border-2 border-border bg-white text-foreground transition-all duration-200 resize-none placeholder:text-muted-foreground shadow-sm;
+  }
+
+  .textarea-fleet:focus {
+    @apply outline-none border-primary shadow-md;
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Checkbox Fleet */
+  .checkbox-fleet {
+<<<<<<< HEAD
+    @apply w-5 h-5 rounded border-2 border-border cursor-pointer transition-all duration-200 accent-primary;
+=======
+    @apply w-6 h-6 rounded-md border-2 border-border cursor-pointer transition-all duration-200 accent-primary bg-white;
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  .checkbox-fleet:checked {
+    @apply bg-primary border-primary;
+  }
+
+  /* Photo Thumbnail - White with shadow */
+  .photo-thumbnail {
+<<<<<<< HEAD
+    @apply relative w-24 h-24 rounded-xl overflow-hidden border border-border bg-card;
+    box-shadow: var(--shadow-sm);
+=======
+    @apply relative w-24 h-24 rounded-xl overflow-hidden border-2 border-border bg-white;
+    box-shadow: var(--shadow-md);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  .photo-thumbnail img {
+    @apply w-full h-full object-cover;
+  }
+
+  .photo-thumbnail-remove {
+    @apply absolute -top-2 -right-2 w-7 h-7 rounded-full bg-destructive text-white flex items-center justify-center text-sm font-bold cursor-pointer transition-all duration-200 shadow-md;
+  }
+
+  .photo-thumbnail-remove:hover {
+    transform: scale(1.15);
+  }
+
+  /* Summary Item */
+  .summary-item {
+<<<<<<< HEAD
+    @apply flex justify-between items-center py-4 border-b border-border/50 last:border-0;
+  }
+
+  .summary-label {
+    @apply text-muted-foreground text-sm;
+  }
+
+  .summary-value {
+    @apply text-foreground font-medium;
+=======
+    @apply flex justify-between items-center py-4 border-b border-border/60 last:border-0;
+  }
+
+  .summary-label {
+    @apply text-muted-foreground text-sm font-semibold uppercase tracking-wide;
+  }
+
+  .summary-value {
+    @apply text-foreground font-bold text-lg;
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Drawing Canvas Container - White with border */
+  .drawing-canvas-container {
+<<<<<<< HEAD
+    @apply relative rounded-xl overflow-hidden border border-border bg-card;
+    box-shadow: var(--shadow-sm);
+=======
+    @apply relative rounded-2xl overflow-hidden border-2 border-border bg-white;
+    box-shadow: var(--shadow-md);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+<<<<<<< HEAD
+      transform: translateY(10px);
+=======
+      transform: translateY(16px);
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+<<<<<<< HEAD
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  .animate-pulse-glow {
+    /* Removed - cleaner without glow */
+=======
+    animation: fadeInUp 0.4s ease-out;
+>>>>>>> f8e2b35b90a0373886293c9ca7880edc9178621a
+  }
+}

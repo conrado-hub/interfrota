@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inter Gestão - Sistema de Frota</title>
+    <meta name="description" content="Sistema de gestão de frota veicular - Check-In/Check-Out" />
+    <meta name="author" content="Inter Gestão" />
+    
+    <!-- Favicon fica dentro de \assets\img\favicon\favicon.ico -->
+    <link rel="icon" href="/assets/img/favicon/favicon.ico" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Inter Gestão - Sistema de Frota" />
+    <meta property="og:description" content="Sistema de gestão de frota veicular com Check-In/Check-Out via QR Code" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://intergestao.com.br/og-image.png" />
+    <meta property="og:url" content="https://intergestao.com.br" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Inter Gestão - Sistema de Frota" />
+    <meta name="twitter:description" content="Sistema de gestão de frota veicular com Check-In/Check-Out via QR Code" />
+    <meta name="twitter:image" content="https://intergestao.com.br/twitter-image.png" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#3b82f6" />
+    
+    <!-- Mobile Web App Capable -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Preconnect to important origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Critical CSS (opcional, para melhor performance) -->
+    <style>
+      /* Critical styles to prevent layout shift */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+        overflow-x: hidden;
+      }
+      
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* Loading animation for initial render */
+      .app-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+      
+      .app-loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    
+    <!-- Google Analytics / Tag Manager (opcional) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+  </head>
+
+  <body>
+    <!-- Loading placeholder -->
+    <div id="loading-placeholder" class="app-loading">
+      <div class="app-loading-spinner"></div>
+      <h2 style="margin-bottom: 10px;">Inter Gestão - Frota</h2>
+      <p>Carregando sistema...</p>
+    </div>
+    
+    <!-- Main React App -->
+    <div id="root"></div>
+    
+    <!-- Remove loading placeholder when app mounts -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Remove loading placeholder when React app mounts
+        const loadingPlaceholder = document.getElementById('loading-placeholder');
+        if (loadingPlaceholder) {
+          loadingPlaceholder.style.display = 'none';
+        }
+        
+        // Show error if React doesn't load
+        setTimeout(function() {
+          const root = document.getElementById('root');
+          if (root && root.innerHTML.trim() === '') {
+            if (loadingPlaceholder) {
+              loadingPlaceholder.innerHTML = `
+                <h2 style="margin-bottom: 10px;">Erro ao carregar</h2>
+                <p style="margin-bottom: 15px;">Não foi possível carregar o sistema.</p>
+                <button onclick="window.location.reload()" style="
+                  background: white;
+                  color: #667eea;
+                  border: none;
+                  padding: 10px 20px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-weight: bold;
+                ">
+                  Tentar novamente
+                </button>
+              `;
+              loadingPlaceholder.style.display = 'flex';
+            }
+          }
+        }, 10000); // 10 seconds timeout
+      });
+    </script>
+    
+    <!-- Main application script -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Register Service Worker for PWA (opcional) -->
+    <!--
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+    -->
+  </body>
+</html>
